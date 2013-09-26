@@ -1,9 +1,9 @@
 /* pg.js
- * This file is run from index.html, 
+ * This file is run from index.html,
  * and is the intial phase in the run-cycle.
  * Use this file to do things before the
  * mobile device / PhoneGap's API methods
- * are ready to be used. It is also used to 
+ * are ready to be used. It is also used to
  * bootstrap angularjs.
  */
 
@@ -29,10 +29,9 @@ var pg = {
 
     var _this = this;
 
-    angular.element(document).ready(function(){
+    angular.element(document).ready(function() {
       angular.bootstrap(document, [_APP_]);
     });
 
   }
 };
-

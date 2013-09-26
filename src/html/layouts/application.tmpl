@@ -28,6 +28,155 @@
 </head>
 <body>
 
+<!-- 
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><%= appName %></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Settings</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+ -->
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="panel1"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-large btn-primary" href="#">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="panel2"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="panel3"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!--       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev icon-2x"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next icon-2x"></span>
+      </a>
+ -->
+    </div><!-- /.carousel -->
+
+
+
+
+      <!-- FOOTER -->
+      <footer>
+        <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
+        <p>&copy; 2013 iMetrical</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+</div>
+<script>
+$(document).ready(function() {  
+  $('#myCarousel').hammer().on('swipeleft', function(){
+    $(this).carousel('next'); 
+  });
+  $('#myCarousel').hammer().on('swiperight', function(){
+    $(this).carousel('prev'); 
+  });
+});
+  </script>
+
+<div class="graphwrapper">
+  <div id="graphdiv"></div>
+</div>
+<script type="text/javascript">
+  var options = {
+    title: 'iMetrical',
+    titleHeight: 32,
+    logscale : false,
+
+    interactionModel: {},
+
+    //showRoller: true, // allows controlling roller
+    // rollPeriod: 30, // ok depends on scale
+
+    //rollPeriod: 3,
+    // errorBars: true, requires sigma column
+
+    gridLineColor: '#777',
+    // highlightCircleSize: 10,
+    strokeWidth: 2,
+    colors:['#cfc'],
+    // axis:{
+    //   'weight':{axisLabelWidth:20}
+    // },
+    axisLineColor: '#ccc',
+    // drawXGrid: false,
+    // drawYGrid: false,
+    // axisLabelWidth:100, // doesn't seem to do anything
+    yAxisLabelWidth:25,
+    showLabelsOnHighlight:false,
+  };
+  var data =  // CSV or path to a CSV file.
+    "Date,Temperature\n" +
+    "2013-05-07,75\n" +
+    "2013-05-08,70\n" +
+    "2013-05-09,72\n" +
+    "2013-05-10,70\n" +
+    "2013-05-11,80\n";
+
+  g = new Dygraph(
+    document.getElementById("graphdiv"),
+    data,
+    options
+  );
+  // g.updateOptions(options);
+
+</script>
+
   <div id="container" class="container">
     <div
       id="main"

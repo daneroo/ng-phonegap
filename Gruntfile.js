@@ -6,7 +6,7 @@
 
 module.exports = function(grunt) {
 
-  var _APP_NAME_ = "CHANGE ME IN Gruntfile.js";
+  var _APP_NAME_ = "iMetrical-T5K";
 
   // initial grunt configuration
   grunt.initConfig({
@@ -39,7 +39,15 @@ module.exports = function(grunt) {
           // add any Bower components here.
           '<%= bowerDir %>/angular/angular.js',
           '<%= bowerDir %>/angular-route/angular-route.js',
-          '<%= bowerDir %>/angular-touch/angular-touch.js'
+          '<%= bowerDir %>/angular-touch/angular-touch.js',
+          '<%= bowerDir %>/jquery/jquery.js',
+          '<%= bowerDir %>/bootstrap/dist/js/bootstrap.js',
+          // '<%= bowerDir %>/hammerjs/dist/jquery.hammer.js',
+          '<%= bowerDir %>/hammerjs/dist/hammer.js',
+          '<%= bowerDir %>/hammerjs/plugins/hammer.fakemultitouch.js',
+          '<%= bowerDir %>/hammerjs/plugins/hammer.showtouches.js',
+          '<%= bowerDir %>/hammerjs/plugins/jquery.hammer.js',
+          '<%= bowerDir %>/dygraphs/dygraph-combined.js'
         ],
         // shouldn't need to touch this.
         src: [

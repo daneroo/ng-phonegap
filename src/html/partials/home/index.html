@@ -2,9 +2,12 @@
 
 <div id='slider' class='swipe'>
   <div class='swipe-wrap'>
-    <div class="thing" style="background:url(img/lightning1.jpg) center no-repeat;background-size: cover">One</div>
-    <div class="thing" style="background:url(img/lightning2.jpg) center no-repeat;background-size: cover">Two</div>
-    <div class="thing" style="background:url(img/lightning3.jpg) center no-repeat;background-size: cover">Three</div>
+    <div ng-repeat="slide in slides">
+        <div class="thing" style="background:url(img/lightning{{slide.imgIdx}}.jpg) center no-repeat;background-size: cover">
+            {{slide.text}}
+            <div style="height:{{(3-$index)*300}}px"></div>
+        </div>
+    </div>
   </div>
 </div>
 

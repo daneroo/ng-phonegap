@@ -12,8 +12,8 @@
 
 TODO
 
+* Rename (thing) slide components and style
 * Remove timeout from swipe init (home controlles)
-* Rename (thing) slide components
 * use ng-repeat in home controller
 * make a page larger than vh
 * add settings side-bar (consider semantic-ui)

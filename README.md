@@ -1,3 +1,24 @@
+## My mods
+
+* Edit `config.xml.tmpl` change id, descr, name,..
+* Edit Gruntfile: change _APP_NAME_, add swipe.js
+* bower install swipe --save
+* add swipe markup to partials/home
+* add swipe style to swipe.less
+* add swipe init to home_sontroller (timeout)
+* grunt build:development;
+* grunt build:production;
+* phonegap run ios
+
+TODO
+
+* Remove timeout from swipe init (home controlles)
+* Rename (thing) slide components
+* use ng-repeat in home controller
+* make a page larger than vh
+* add settings side-bar (consider semantic-ui)
+* parallax baby
+
 # Angular PhoneGap
 
 An opinionated workflow for building kick-ass mobile apps using
